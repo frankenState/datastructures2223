@@ -121,77 +121,27 @@ public class LinkedList<E> {
     
     //
     public boolean contains(E e ){
-        
-        Node<E> temp = this.head;
-        
-        while (temp != null){
-            if (temp.data == e) return true;
-            
-            temp = temp.next;
-        }
-        
+        // TO DO
         return false;
     }
     
     public E get(int index){
-     
-        Node<E> temp = this.head;
-        
-        for (int i = 0; i < this.size; i++) {
-            if (index == i) return temp.data;
-            
-            temp = temp.next;
-        }
-        
+        // TO DO
         return null;
     }
     
     public int indexOf(E e){
-        
-        Node<E> temp = this.head;
-        
-        for (int i = 0; i < this.size; i++) {
-            if (temp.data == e) return i;
-            
-            temp = temp.next;
-        }
-        
+        // TO DO    
         return -1;
     }
     
-    public int lastIndexOf(E e){
-        
-        int index = -1;
-        
-        Node<E> temp = this.head;
-        
-        for (int i = 0; i < this.size - 1; i++) {
-            if (temp.data == e) 
-                index = i;
-            
-            temp = temp.next;
-        }
-        
-        return index;
+    public int lastIndexOf(E e){        
+        // TO DO    
+        return -1;
     }
     
-    public E set (int index, E e){
-        
-        if (index == 0) this.addFirst(e);
-        else if (index == this.size - 1) this.addLast(e);
-        else {
-            Node<E> previous = this.head;
-        
-            for (int i = 1; i < index; i++) 
-                previous = previous.next;
-            
-            Node<E> current = previous.next;
-            previous.next = new Node<>(e);
-            (previous.next).next = current.next;
-            
-        }
-        
-        
+    public E set (int index, E e){        
+        // TO DO
         return e;
     }
     

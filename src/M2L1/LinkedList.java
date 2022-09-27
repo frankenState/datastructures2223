@@ -206,9 +206,9 @@ public class LinkedList<E> {
         System.out.println("Values => " + intLL1);
         intLL1.addLast(25);
         System.out.println("Values => " + intLL1);
-        System.out.println("contains=> " +intLL1.contains(11));
-        System.out.println("get=> " +intLL1.get(1));
-        System.out.println("Indexof=> " + intLL1.indexOf(10));
+        System.out.println("contains=> " +intLL1.contains(10));
+        System.out.println("get=> " +intLL1.get(3));
+        System.out.println("Indexof=> " + intLL1.indexOf(100));
         
 //        
 //        

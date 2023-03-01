@@ -30,7 +30,7 @@ public class SearchingAlgorithms {
 
     public static int binarySearch(int[] array, int low, int up, int key) {
         if (up >= low) {
-            int mid = low + (up - low) / 2; // mid = (low + high) / 2
+            int mid = (low + up) / 2; //low + (up - low) / 2; // mid = (low + high) / 2
             System.out.print(mid + " ");
             if (array[mid] > key) {
                 return binarySearch(array, low, mid - 1, key);

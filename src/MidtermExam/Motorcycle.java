@@ -3,19 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package M2L1;
+package MidtermExam;
 
 /**
  *
  * @author frank lou
- * Wrapper classes [String, Integer,...]
- * Generics [String,Integer,Double,...]
  */
-public class Node<E> {
-    public E data;
-    public Node<E> next;
-    
-    public Node(E e){
-        this.data = e;
+public class Motorcycle extends Vehicle {
+
+    public String type;
+
+    Motorcycle(int passengers, String type) {
+        super(passengers);
+        this.type = type;
     }
 }

@@ -15,7 +15,6 @@ public class SearchingAlgorithms {
 
     public static int linearSearch(int[] array, int key) {
         for (int i = 0; i < array.length; i++) {
-            System.out.print(i + ", ");
             if (key == array[i]) {
                 return i;
             }
@@ -31,7 +30,6 @@ public class SearchingAlgorithms {
     public static int binarySearch(int[] array, int low, int up, int key) {
         if (up >= low) {
             int mid = (low + up) / 2; //low + (up - low) / 2; // mid = (low + high) / 2
-            System.out.print(mid + " ");
             if (array[mid] > key) {
                 return binarySearch(array, low, mid - 1, key);
             } else if (array[mid] < key) {
@@ -45,18 +43,21 @@ public class SearchingAlgorithms {
     }
 
     public static void main(String[] args) {
-        int[] array = {71, 34, 11, 10, 38, 41, 20, 64, 98, 87, 48, 87, 27, 93, 41, 59, 94, 97, 42, 54};
+        int[] array = {71, 34, 11, 10, 38, 41, 20, 64};
 
-        System.out.print("1. ");
-        linearSearch(array, 94);
-        System.out.println("");
+        System.out.println(Arrays.toString(array));
+        int index = linearSearch(array, 38);
+        System.out.println("Index=> " + index);
+        index = linearSearch(array, 68);
+        System.out.println("Index=> " + index);
 
         Arrays.sort(array);
 
-        System.out.println("Sorted=> " + Arrays.toString(array));
-        System.out.print("2. ");
-        binarySearch(array, 97);
-        System.out.println("");
+        System.out.println(Arrays.toString(array));
+        index = binarySearch(array, 10);
+        System.out.println("Index=> " + index);
+        index = binarySearch(array, 13);
+        System.out.println("Index=> " + index);
         
         
         

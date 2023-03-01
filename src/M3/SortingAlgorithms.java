@@ -16,7 +16,10 @@ public class SortingAlgorithms {
     public static void main(String[] args) {
         int[] array = {-1, 99, 500, 93, 36, 112, 213, 123, 52, 98, 10};
         
-        mergeSort(array);
+        // quickSort(array);
+         mergeSort(array);
+        // insertionSort(array);
+        // selectionSort(array);
         System.out.println("Selection Sort=> " + Arrays.toString(array));
     }
     
@@ -100,10 +103,6 @@ public class SortingAlgorithms {
             int[] second = new int[secondLength];
             System.arraycopy(array, array.length / 2, second, 0, secondLength);
             mergeSort(second);
-            
-            System.out.println("first=> " + Arrays.toString(first));
-            System.out.println("second=> " + Arrays.toString(second));
-            
             merge(first, second, array);
         }
     }
